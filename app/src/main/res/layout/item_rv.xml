@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.gfq.usergdatabinddemo.TestBean" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{data.title}">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_time"
+            format="@{`yyyy-MM-dd`}"
+            timeText="@{data.time}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+
+        <ImageView
+            error="@{@drawable/ic_launcher}"
+            imageUrl="@{data.url}"
+            placeHolder="@{@drawable/ic_launcher}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#333" />
+
+        <ImageView
+            imageUrl="@{data.url}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#333" />
+
+        <ImageView
+            corner="@{50}"
+            error="@{@drawable/ic_launcher}"
+            imageUrl="@{data.url}"
+            overrideH="@{100}"
+            overrideW="@{100}"
+            placeHolder="@{@drawable/ic_launcher}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#333" />
+
+    </LinearLayout>
+
+
+</layout>
